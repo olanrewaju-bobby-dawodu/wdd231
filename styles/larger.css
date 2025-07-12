@@ -1,0 +1,74 @@
+/* Desktop Styles */
+@media screen and (min-width: 768px) {
+  nav.navigation {
+    display: block;
+  }
+
+  header {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  nav.navigation ul {
+    display: flex;
+    background-color: #1a1a1a; /* Dark for high contrast */
+  }
+
+  nav.navigation ul li {
+    border: none;
+  }
+
+  nav.navigation ul li a {
+    padding: 1rem 2rem;
+    color: #ffffff;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  nav.navigation ul li a.active,
+  nav.navigation ul li a:hover {
+    background-color: #003366; /* Dark blue hover with white text */
+    color: #ffffff;
+  }
+
+  main.main {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .course {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .course figure,
+  .resources {
+    flex: 1;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  #courseContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  #courseContainer div {
+    flex: 1 1 240px;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    color: #111111;
+  }
+}

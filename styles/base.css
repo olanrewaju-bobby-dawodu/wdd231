@@ -1,0 +1,170 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff; /* pure white */
+  color: #111111; /* dark gray (AAA on white) */
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #1a1a1a; /* dark background for strong contrast */
+  color: #ffffff;
+}
+
+header img {
+  width: 50px;
+  height: auto;
+}
+
+header span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+/* Navigation */
+nav.navigation {
+  background-color: #1a1a1a;
+  display: none;
+}
+
+nav.navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav.navigation ul li {
+  border-bottom: 1px solid #444444;
+}
+
+nav.navigation ul li a {
+  display: block;
+  padding: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav.navigation ul li a.active,
+nav.navigation ul li a:hover {
+  background-color: #003366; /* dark blue - excellent contrast */
+  color: #ffffff;
+}
+
+nav.navigation.open {
+  display: block;
+}
+
+/* Main */
+main.main {
+  padding: 1rem;
+}
+
+/* Sections */
+section {
+  margin-bottom: 2rem;
+}
+
+section h2 {
+  background-color: #003366; /* dark blue */
+  color: #ffffff;
+  padding: 0.5rem;
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* Course Image */
+.course figure {
+  text-align: center;
+}
+
+.course figure img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.buttons button {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid #555555;
+  background-color: #e5e5e5;
+  color: #111111;
+  transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+  background-color: #c0c0c0;
+}
+
+/* Course Container */
+#courseContainer {
+  margin-top: 1rem;
+}
+
+.course-desc-wrapper {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #111111;
+}
+
+/* Course Cards */
+.course-card {
+  background-color: #f9f9f9;
+  border: 1px solid #cccccc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  color: #111111;
+}
+
+/* Footer */
+footer {
+  padding: 1rem;
+  background-color: #1a1a1a;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+footer .socials {
+  margin: 1rem 0;
+}
+
+footer .socials a {
+  margin: 0 0.5rem;
+}
+
+footer img {
+  vertical-align: middle;
+  filter: brightness(0) invert(1); /* makes icons white */
+}
