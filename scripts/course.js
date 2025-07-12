@@ -7,7 +7,7 @@ const courses = [
     certificate: 'Web and Computer Programming',
     description: 'This course introduces students to programming basics such as variables, loops, and decisions using Python.',
     technology: ['Python'],
-    completed: false
+    completed: true
   },
   {
     subject: 'WDD',
@@ -17,7 +17,7 @@ const courses = [
     certificate: 'Web and Computer Programming',
     description: 'Introduces web development using HTML and CSS. Hands-on projects help students get familiar with the web.',
     technology: ['HTML', 'CSS'],
-    completed: false
+    completed: true
   },
   {
     subject: 'CSE',
@@ -27,7 +27,7 @@ const courses = [
     certificate: 'Web and Computer Programming',
     description: 'Covers writing and organizing reusable functions, error handling, and problem solving.',
     technology: ['Python'],
-    completed: false
+    completed: true
   },
   {
     subject: 'CSE',
@@ -37,7 +37,7 @@ const courses = [
     certificate: 'Web and Computer Programming',
     description: 'Introduces object-oriented programming with encapsulation, inheritance, and polymorphism.',
     technology: ['C#'],
-    completed: false
+    completed: true
   },
   {
     subject: 'WDD',
@@ -47,7 +47,7 @@ const courses = [
     certificate: 'Web and Computer Programming',
     description: 'Uses JavaScript to create dynamic user interactions and responsive websites.',
     technology: ['HTML', 'CSS', 'JavaScript'],
-    completed: false
+    completed: true
   },
   {
     subject: 'WDD',
@@ -61,14 +61,14 @@ const courses = [
   }
 ];
 
-// HTML elements selection
+// HTML elements
 const courseContainer = document.getElementById('courseContainer');
 const totalCreditsSpan = document.getElementById('totalCredits');
 const allBtn = document.getElementById('allBtn');
 const cseBtn = document.getElementById('cseBtn');
 const wddBtn = document.getElementById('wddBtn');
 
-// courses display
+// Display courses
 function displayCourses(courseList) {
   courseContainer.innerHTML = '';
   let totalCredits = 0;
@@ -78,9 +78,12 @@ function displayCourses(courseList) {
 
     const div = document.createElement('div');
     div.classList.add('course-card');
+    if (course.completed) {
+      div.classList.add('completed');
+    }
 
     div.innerHTML = `
-      <h3>${course.subject} ${course.number}: ${course.title}</h3>
+      <h3>${course.completed ? '✔ ' : ''}${course.subject} ${course.number}: ${course.title}</h3>
       <p><strong>Credits:</strong> ${course.credits}</p>
       <p><strong>Description:</strong> ${course.description}</p>
       <p><strong>Technologies:</strong> ${course.technology.join(', ')}</p>
@@ -92,10 +95,10 @@ function displayCourses(courseList) {
   totalCreditsSpan.textContent = totalCredits;
 }
 
-//all courses by default
+//initial load
 displayCourses(courses);
 
-// Event listeners for buttons
+//Filter button
 allBtn.addEventListener('click', () => displayCourses(courses));
 cseBtn.addEventListener('click', () => {
   const filtered = courses.filter(course => course.subject === 'CSE');
