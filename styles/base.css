@@ -109,7 +109,7 @@ section h2 {
 
 .about-profile-wrapper {
     display: block;
-    margin-top: 2rem;
+    padding: 1rem;
 }
 
 .resources,
@@ -118,7 +118,8 @@ section h2 {
 }
 
 .course img {
-    max-width: 100%;
+    width: 100%;
+    max-width: 300px;
     height: auto;
     border-radius: 0.5rem;
 }
