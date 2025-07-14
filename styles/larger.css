@@ -71,4 +71,28 @@
     border-radius: 6px;
     color: #111111;
   }
+
+  .about-profile-wrapper {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .resources {
+    flex: 1;
+  }
+
+  .course {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .course img {
+    max-width: 100%;
+    margin-top: 1rem;
+  }
 }
+

@@ -107,6 +107,22 @@ section h2 {
   height: auto;
 }
 
+.about-profile-wrapper {
+    display: block;
+    margin-top: 2rem;
+}
+
+.resources,
+.course {
+    margin-bottom: 2rem;
+}
+
+.course img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
 /* Buttons */
 .buttons {
   display: flex;

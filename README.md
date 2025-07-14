@@ -37,4 +37,4 @@ This is a responsive personal site built for the WDD 231 course.
 
 ## 🔄 See Full Commit History
 
-[Commit Log](https://github.com/YOUR-USERNAME/olanrewaju-bobby-dawodu/commits/main)
+[Commit Log](https://github.com/olanrewaju-bobby-dawodu/commits/main)
