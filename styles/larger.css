@@ -67,7 +67,7 @@
   }
 
   .resources- {
-    flex: 1;
+    flex: 2;
   }
 
   .course {
@@ -75,19 +75,23 @@
   }
 
   .course figure {
-    text-align: center;
     margin: 0;
+    text-align: center;
   }
 
   .course figure img {
-    width: 120px;
+    width: 100%;
+    max-width: 250px;
     height: auto;
     border-radius: 0.5rem;
+    display: block;
+    margin: 0 auto;
   }
 
   .course figure figcaption {
-    font-weight: bold;
-    font-size: 1rem;
     margin-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #111;
   }
 }
