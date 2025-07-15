@@ -66,6 +66,7 @@
     justify-content: space-between;
   }
 
+<<<<<<< HEAD
   .about-section,
   .profile-section {
     flex: 1;
@@ -101,5 +102,34 @@
 
   footer {
     margin-top: auto;
+=======
+  .resources- {
+    flex: 2;
+  }
+
+  .course {
+    flex: 1;
+  }
+
+  .course figure {
+    margin: 0;
+    text-align: center;
+  }
+
+  .course figure img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 0.5rem;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .course figure figcaption {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #111;
+>>>>>>> fd1bcd788145873b1d7ce90b41997f96c883ac02
   }
 }
