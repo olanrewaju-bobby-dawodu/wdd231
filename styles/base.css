@@ -1,24 +1,22 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-/* Sticky Footer  */
-html, body {
-  height: 100%;
-}
-
 html {
-  font-display: swap;
+  scroll-behavior: smooth;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  font-family: 'Poppins', 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+  font-family: 'Poppins', 'Roboto', sans-serif;
   background-color: #ffffff;
   color: #111111;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Header */
@@ -39,7 +37,6 @@ header img {
 header span {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #ffffff;
 }
 
 .hamburger {
@@ -52,8 +49,8 @@ header span {
 
 /* Navigation */
 nav.navigation {
-  background-color: #1a1a1a;
   display: none;
+  background-color: #1a1a1a;
 }
 
 nav.navigation ul {
@@ -76,20 +73,25 @@ nav.navigation ul li a {
 nav.navigation ul li a.active,
 nav.navigation ul li a:hover {
   background-color: #003366;
-  color: #ffffff;
 }
 
 nav.navigation.open {
   display: block;
 }
 
-/* Main  */
+/* Main Content */
 main.main {
-  flex: 1;
   padding: 1rem;
+  flex-grow: 1;
 }
 
-/*  Sections */
+h1.hero-text {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #003366;
+}
+
+/* Sections */
 section {
   margin-bottom: 2rem;
 }
@@ -98,41 +100,36 @@ section h2 {
   background-color: #003366;
   color: #ffffff;
   padding: 0.5rem;
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.5rem 0;
   font-size: 1.2rem;
 }
 
-/* Layout for About Me + Profile Picture    */
-.about-profile-wrapper {
-  display: block;
-  padding: 1rem;
+/* About Section */
+.about-section p {
+  line-height: 1.6;
 }
 
-.resources,
-.course {
-  margin-bottom: 2rem;
-}
-
-/* Profile Image */
-.course figure {
+/* Profile Section */
+.profile-section figure {
   text-align: center;
   margin: 0;
 }
 
-.course figure img {
-  width: 100%;
+.profile-section img {
   max-width: 300px;
+  width: 100%;
   height: auto;
   border-radius: 0.5rem;
 }
 
-.course figure figcaption {
+.profile-section figcaption {
   margin-top: 0.5rem;
   font-weight: bold;
-  text-align: center;
+  font-size: 1rem;
+  color: #333333;
 }
 
-/* Buttons */
+/* Course Buttons */
 .buttons {
   display: flex;
   flex-wrap: wrap;
@@ -157,29 +154,29 @@ section h2 {
 
 /* Course Container */
 #courseContainer {
-  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.course-card {
+  background-color: #f9f9f9;
+  border: 1px solid #cccccc;
+  padding: 1rem;
+  border-radius: 6px;
+  flex: 1 1 240px;
+  color: #111111;
 }
 
 .course-desc-wrapper {
   margin-top: 1rem;
   font-weight: bold;
-  color: #111111;
 }
 
-/* Course Cards */
-.course-card {
-  background-color: #f9f9f9;
-  border: 1px solid #cccccc;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-  color: #111111;
-}
-
+/* Completed Class */
 .completed {
   background-color: #f1fdf4;
   border-left: 4px solid green;
-  opacity: 0.9;
 }
 
 .completed h3::before {
@@ -188,7 +185,7 @@ section h2 {
   font-weight: bold;
 }
 
-/* *Footer */
+/* Footer */
 footer {
   padding: 1rem;
   background-color: #1a1a1a;

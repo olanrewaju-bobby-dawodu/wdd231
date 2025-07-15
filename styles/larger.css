@@ -1,4 +1,6 @@
+/* Desktop Styles */
 @media screen and (min-width: 768px) {
+  /* Navigation visible on desktop */
   nav.navigation {
     display: block;
   }
@@ -39,26 +41,7 @@
     margin: 0 auto;
   }
 
-  .buttons {
-    justify-content: center;
-  }
-
-  #courseContainer {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  #courseContainer div {
-    flex: 1 1 240px;
-    background-color: #f9f9f9;
-    padding: 1rem;
-    border: 1px solid #cccccc;
-    border-radius: 6px;
-    color: #111111;
-  }
-
+  /* Flex layout for About + Profile section */
   .about-profile-wrapper {
     display: flex;
     gap: 2rem;
@@ -74,23 +57,48 @@
     flex: 1;
   }
 
+  /* Profile image and caption styling */
   .course figure {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
     margin: 0;
+    text-align: center;
   }
 
   .course figure img {
-    width: 120px;
+    width: 100%;
+    max-width: 240px;
     height: auto;
     border-radius: 0.5rem;
   }
 
   .course figure figcaption {
+    margin-top: 0.5rem;
     font-weight: bold;
     font-size: 1rem;
-    text-align: center;
+    color: #333333;
+  }
+
+  /* Course filter buttons */
+  .buttons {
+    justify-content: center;
+  }
+
+  /* Course container cards */
+  #courseContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  #courseContainer div {
+    flex: 1 1 240px;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    color: #111111;
   }
 }

@@ -1,8 +1,11 @@
+
 html {
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
+  line-height: 1.15; 
+  -webkit-text-size-adjust: 100%; 
 }
 
+/* Sections
+    */
 body {
   margin: 0;
 }
@@ -16,24 +19,28 @@ h1 {
   margin: 0.67em 0;
 }
 
+/* Grouping content
+    */
 hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
+  box-sizing: content-box; 
+  height: 0; 
+  overflow: visible; 
 }
 
 pre {
-  font-family: monospace, monospace;
-  font-size: 1em;
+  font-family: monospace, monospace; 
+  font-size: 1em; 
 }
 
+/* Text-level semantics
+    */
 a {
   background-color: transparent;
 }
 
 abbr[title] {
-  border-bottom: none;
-  text-decoration: underline dotted;
+  border-bottom: none; 
+  text-decoration: underline dotted; 
 }
 
 b,
@@ -68,10 +75,14 @@ sup {
   top: -0.5em;
 }
 
+/* Embedded content
+  ================================================ */
 img {
   border-style: none;
 }
 
+/* Forms
+    */
 button,
 input,
 optgroup,
@@ -84,12 +95,12 @@ textarea {
 }
 
 button,
-input {
+input { 
   overflow: visible;
 }
 
 button,
-select {
+select { 
   text-transform: none;
 }
 
@@ -161,6 +172,8 @@ textarea {
   font: inherit;
 }
 
+/* Interactive
+========================================================== */
 details {
   display: block;
 }
@@ -169,6 +182,8 @@ summary {
   display: list-item;
 }
 
+/* Misc
+   ============================================= */
 template {
   display: none;
 }
