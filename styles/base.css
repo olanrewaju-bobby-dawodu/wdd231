@@ -4,24 +4,19 @@
   box-sizing: border-box;
 }
 
-/* Body and Global Styles  */
-body {
+html {
+  scroll-behavior: smooth;
   font-family: 'Poppins', 'Roboto', sans-serif;
-  margin: 0;
-<<<<<<< HEAD
-  padding: 0;
-=======
-  padding: 0 0 120px;
->>>>>>> fd1bcd788145873b1d7ce90b41997f96c883ac02
-  background-color: #ffffff;
-  color: #111111;
 }
 
-main.main {
-  flex: 1;
-  padding: 1rem;
-  max-width: 960px;
-  margin: 0 auto;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #111111;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Header */
@@ -53,8 +48,7 @@ header span {
   color: #ffffff;
 }
 
-<<<<<<< HEAD
-/*  Navigation */
+/* Navigation */
 nav.navigation {
   background-color: #1a1a1a;
   display: none;
@@ -62,12 +56,6 @@ nav.navigation {
 
 nav.navigation.open {
   display: block;
-=======
-/*   Navigation */
-nav.navigation {
-  background-color: #1a1a1a;
-  display: none;
->>>>>>> fd1bcd788145873b1d7ce90b41997f96c883ac02
 }
 
 nav.navigation ul {
@@ -93,100 +81,56 @@ nav.navigation ul li a:hover {
   color: #ffffff;
 }
 
-<<<<<<< HEAD
-/* Section Titles */
-=======
-nav.navigation.open {
-  display: block;
-}
-
-/*Main */
+/* Main */
 main.main {
   padding: 1rem;
+  flex-grow: 1;
 }
 
-/*  Sections */
+.hero-text {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Section Styling */
 section {
   margin-bottom: 2rem;
 }
 
->>>>>>> fd1bcd788145873b1d7ce90b41997f96c883ac02
 section h2 {
   background-color: #003366;
   color: #ffffff;
   padding: 0.5rem;
-<<<<<<< HEAD
-  margin: 0 0 1rem;
-  font-size: 1.2rem;
-}
-
-/*  About + Profile Section */
-.about-profile-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-.about-section,
-.profile-section {
-  width: 100%;
-}
-
-.profile-section figure {
-=======
   margin: 0 0 0.5rem;
   font-size: 1.2rem;
 }
 
-/*  Layout */
-.about-profile-wrapper {
-  display: block;
+/* About Section */
+.about-section {
   padding: 1rem;
+  background-color: #f8f8f8;
+  border-radius: 0.5rem;
 }
 
-.resources-,
-.course {
-  margin-bottom: 2rem;
-}
-
-/* Course */
-.course figure {
->>>>>>> fd1bcd788145873b1d7ce90b41997f96c883ac02
+/* Profile Section */
+.profile-section {
   text-align: center;
 }
 
-<<<<<<< HEAD
-.profile-section figure img {
-=======
-.course figure img {
->>>>>>> fd1bcd788145873b1d7ce90b41997f96c883ac02
+.profile-section img {
   width: 100%;
   max-width: 300px;
   height: auto;
   border-radius: 0.5rem;
 }
 
-<<<<<<< HEAD
-.profile-section figure figcaption {
-  margin-top: 0.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-/* Course Work Section */
+/* Course Section */
 .course-work {
-  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #f4f4f4;
+  border-radius: 0.5rem;
 }
 
-=======
-.course figure figcaption {
-  margin-top: 0.5rem;
-  font-weight: bold;
-}
-
-/* Buttons */
->>>>>>> fd1bcd788145873b1d7ce90b41997f96c883ac02
 .buttons {
   display: flex;
   flex-wrap: wrap;
@@ -209,10 +153,6 @@ section h2 {
   background-color: #c0c0c0;
 }
 
-<<<<<<< HEAD
-=======
-/* Course Cards */
->>>>>>> fd1bcd788145873b1d7ce90b41997f96c883ac02
 #courseContainer {
   margin-top: 1rem;
 }
@@ -244,33 +184,36 @@ section h2 {
   font-weight: bold;
 }
 
-/* Footer (Fixed at Bottom) */
+/* Footer */
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 1rem;
+  padding: 1rem 2rem;
   background-color: #1a1a1a;
   text-align: center;
   font-size: 0.9rem;
   color: #ffffff;
-<<<<<<< HEAD
   margin-top: auto;
-=======
-  z-index: 1000;
->>>>>>> fd1bcd788145873b1d7ce90b41997f96c883ac02
 }
 
 footer .socials {
-  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 footer .socials a {
   margin: 0 0.5rem;
 }
 
-footer img {
-  vertical-align: middle;
-  filter: brightness(0) invert(1);
+footer .socials a img {
+  width: 24px;
+  height: 24px;
+  filter: grayscale(100%) brightness(100%) invert(100%);
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
+
+footer .socials a:hover img {
+  filter: none; 
+  transform: scale(1.2); 
+}
+
