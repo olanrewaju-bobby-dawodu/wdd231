@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="WDD 231 - Web Frontend Development - Olanrewaju Bobby Dawodu - Home and introductory page for the WDD 231 course, for student Olanrewaju Bobby Dawodu" />
+  <meta name="description" content="WDD 231 - Web Frontend Development - Olanrewaju Bobby Dawodu - Home and introductory page for the WDD 231 course." />
   <meta name="author" content="Olanrewaju Bobby Dawodu" />
-  <title>WDD 231 - Web Frontend Development Course - Olanrewaju Bobby Dawodu</title>
+  <title>WDD 231 - Web Frontend Development - Olanrewaju Bobby Dawodu</title>
 
   <link rel="stylesheet" href="styles/normalize.css" />
   <link rel="stylesheet" href="styles/base.css" />
   <link rel="stylesheet" href="styles/larger.css" />
 
-  <!-- Google Fonts (single optimized link) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
 
   <script src="scripts/getdates.js" defer></script>
   <script src="scripts/course.js" defer></script>
   <script src="scripts/navigation.js" defer></script>
 </head>
+
 <body>
   <header>
     <img src="images/logo.svg" alt="Site Logo" width="512" height="512" />
@@ -39,20 +39,20 @@
     <h1 class="hero-text">Home</h1>
 
     <section class="about-profile-wrapper">
-      <div class="resources-">
+      <section class="about-section">
         <h2 class="res-text">About Me</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis eius sit mollitia tempora, quod nemo labore quas quam totam vero iste ipsam veritatis. Asperiores voluptatem exercitationem dolor sequi! Accusantium corporis cum optio? Deserunt temporibus non tenetur explicabo sit deleniti quis perspiciatis consequatur illo qui, corporis debitis doloribus tempora consectetur molestiae.
         </p>
-      </div>
+      </section>
 
-      <div class="course">
+      <section class="profile-section">
         <h2 class="abj-text">Profile Picture</h2>
         <figure>
           <img src="images/mypic.jpg" alt="Olanrewaju Bobby Dawodu" loading="lazy" />
           <figcaption>Olanrewaju Bobby Dawodu</figcaption>
         </figure>
-      </div>
+      </section>
     </section>
 
     <section class="course-work">
@@ -82,10 +82,7 @@
         <img src="images/twitter-x.svg" alt="Twitter X logo" width="16" height="16" />
       </a>
     </div>
-    <p>
-      <span>&copy;</span>
-      <span id="currentyear"></span> - Olanrewaju Bobby Dawodu - Lagos State, Nigeria
-    </p>
+    <p>&copy; <span id="currentyear"></span> - Olanrewaju Bobby Dawodu - Lagos State, Nigeria</p>
     <p id="lastModified"></p>
   </footer>
 </body>

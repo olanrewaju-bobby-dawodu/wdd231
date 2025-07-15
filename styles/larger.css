@@ -1,6 +1,4 @@
-/* Desktop Styles */
 @media screen and (min-width: 768px) {
-  /* Navigation visible on desktop */
   nav.navigation {
     display: block;
   }
@@ -41,51 +39,10 @@
     margin: 0 auto;
   }
 
-  /* Flex layout for About + Profile section */
-  .about-profile-wrapper {
-    display: flex;
-    gap: 2rem;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-
-  .resources- {
-    flex: 1;
-  }
-
-  .course {
-    flex: 1;
-  }
-
-  /* Profile image and caption styling */
-  .course figure {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    text-align: center;
-  }
-
-  .course figure img {
-    width: 100%;
-    max-width: 240px;
-    height: auto;
-    border-radius: 0.5rem;
-  }
-
-  .course figure figcaption {
-    margin-top: 0.5rem;
-    font-weight: bold;
-    font-size: 1rem;
-    color: #333333;
-  }
-
-  /* Course filter buttons */
   .buttons {
     justify-content: center;
   }
 
-  /* Course container cards */
   #courseContainer {
     display: flex;
     justify-content: space-around;
@@ -100,5 +57,49 @@
     border: 1px solid #cccccc;
     border-radius: 6px;
     color: #111111;
+  }
+
+  .about-profile-wrapper {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .about-section,
+  .profile-section {
+    flex: 1;
+  }
+
+  .profile-section figure {
+    text-align: center;
+    margin: 0;
+  }
+
+  .profile-section figure img {
+    max-width: 240px;
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+
+  .profile-section figure figcaption {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  main.main {
+    flex: 1;
+  }
+
+  footer {
+    margin-top: auto;
   }
 }

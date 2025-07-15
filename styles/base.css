@@ -4,19 +4,23 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
+/* Body and Global Styles  */
 body {
+  font-family: 'Poppins', 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', 'Roboto', sans-serif;
   background-color: #ffffff;
   color: #111111;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+main.main {
+  flex: 1;
+  padding: 1rem;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 /* Header */
@@ -37,6 +41,7 @@ header img {
 header span {
   font-size: 1.2rem;
   font-weight: bold;
+  color: #ffffff;
 }
 
 .hamburger {
@@ -47,10 +52,14 @@ header span {
   color: #ffffff;
 }
 
-/* Navigation */
+/*  Navigation */
 nav.navigation {
-  display: none;
   background-color: #1a1a1a;
+  display: none;
+}
+
+nav.navigation.open {
+  display: block;
 }
 
 nav.navigation ul {
@@ -73,63 +82,54 @@ nav.navigation ul li a {
 nav.navigation ul li a.active,
 nav.navigation ul li a:hover {
   background-color: #003366;
+  color: #ffffff;
 }
 
-nav.navigation.open {
-  display: block;
-}
-
-/* Main Content */
-main.main {
-  padding: 1rem;
-  flex-grow: 1;
-}
-
-h1.hero-text {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #003366;
-}
-
-/* Sections */
-section {
-  margin-bottom: 2rem;
-}
-
+/* Section Titles */
 section h2 {
   background-color: #003366;
   color: #ffffff;
   padding: 0.5rem;
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 1rem;
   font-size: 1.2rem;
 }
 
-/* About Section */
-.about-section p {
-  line-height: 1.6;
+/*  About + Profile Section */
+.about-profile-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
-/* Profile Section */
+.about-section,
+.profile-section {
+  width: 100%;
+}
+
 .profile-section figure {
   text-align: center;
   margin: 0;
 }
 
-.profile-section img {
-  max-width: 300px;
+.profile-section figure img {
   width: 100%;
+  max-width: 300px;
   height: auto;
   border-radius: 0.5rem;
 }
 
-.profile-section figcaption {
+.profile-section figure figcaption {
   margin-top: 0.5rem;
-  font-weight: bold;
   font-size: 1rem;
-  color: #333333;
+  font-weight: bold;
 }
 
-/* Course Buttons */
+/* Course Work Section */
+.course-work {
+  margin-top: 2rem;
+}
+
 .buttons {
   display: flex;
   flex-wrap: wrap;
@@ -152,31 +152,29 @@ section h2 {
   background-color: #c0c0c0;
 }
 
-/* Course Container */
 #courseContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.course-desc-wrapper {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #111111;
 }
 
 .course-card {
   background-color: #f9f9f9;
   border: 1px solid #cccccc;
   padding: 1rem;
-  border-radius: 6px;
-  flex: 1 1 240px;
+  margin-bottom: 1rem;
+  border-radius: 8px;
   color: #111111;
 }
 
-.course-desc-wrapper {
-  margin-top: 1rem;
-  font-weight: bold;
-}
-
-/* Completed Class */
 .completed {
   background-color: #f1fdf4;
   border-left: 4px solid green;
+  opacity: 0.9;
 }
 
 .completed h3::before {
@@ -192,6 +190,7 @@ footer {
   text-align: center;
   font-size: 0.9rem;
   color: #ffffff;
+  margin-top: auto;
 }
 
 footer .socials {
