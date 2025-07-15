@@ -1,4 +1,3 @@
-/* Desktop Styles */
 @media screen and (min-width: 768px) {
   nav.navigation {
     display: block;
@@ -77,8 +76,9 @@
 
   .course figure {
     display: flex;
+    flex-direction: column; 
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
     margin: 0;
   }
 
@@ -91,5 +91,6 @@
   .course figure figcaption {
     font-weight: bold;
     font-size: 1rem;
+    text-align: center;
   }
 }

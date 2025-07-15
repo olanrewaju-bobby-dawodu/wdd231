@@ -1,7 +1,10 @@
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
+}
+
+/* Sticky Footer  */
+html, body {
+  height: 100%;
 }
 
 html {
@@ -9,11 +12,13 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   font-family: 'Poppins', 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #ffffff;
-  color: #111111; 
+  color: #111111;
 }
 
 /* Header */
@@ -22,7 +27,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  background-color: #1a1a1a; 
+  background-color: #1a1a1a;
   color: #ffffff;
 }
 
@@ -70,7 +75,7 @@ nav.navigation ul li a {
 
 nav.navigation ul li a.active,
 nav.navigation ul li a:hover {
-  background-color: #003366; 
+  background-color: #003366;
   color: #ffffff;
 }
 
@@ -78,50 +83,53 @@ nav.navigation.open {
   display: block;
 }
 
-/* Main */
+/* Main  */
 main.main {
+  flex: 1;
   padding: 1rem;
 }
 
-/* Sections */
+/*  Sections */
 section {
   margin-bottom: 2rem;
 }
 
 section h2 {
-  background-color: #003366; 
+  background-color: #003366;
   color: #ffffff;
   padding: 0.5rem;
   margin: 0 0 0.5rem;
   font-size: 1.2rem;
 }
 
-/* Course Image */
+/* Layout for About Me + Profile Picture    */
+.about-profile-wrapper {
+  display: block;
+  padding: 1rem;
+}
+
+.resources,
+.course {
+  margin-bottom: 2rem;
+}
+
+/* Profile Image */
 .course figure {
   text-align: center;
+  margin: 0;
 }
 
 .course figure img {
   width: 100%;
   max-width: 300px;
   height: auto;
+  border-radius: 0.5rem;
 }
 
-.about-profile-wrapper {
-    display: block;
-    padding: 1rem;
-}
-
-.resources,
-.course {
-    margin-bottom: 2rem;
-}
-
-.course img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 0.5rem;
+.course figure figcaption {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  text-align: center;
 }
 
 /* Buttons */
@@ -180,8 +188,7 @@ section h2 {
   font-weight: bold;
 }
 
-
-/* Footer */
+/* *Footer */
 footer {
   padding: 1rem;
   background-color: #1a1a1a;
@@ -200,5 +207,5 @@ footer .socials a {
 
 footer img {
   vertical-align: middle;
-  filter: brightness(0) invert(1); 
+  filter: brightness(0) invert(1);
 }
