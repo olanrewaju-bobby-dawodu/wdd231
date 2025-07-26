@@ -395,7 +395,7 @@ footer .footer-social a img:hover {
   .members-card {
     display: flex;
     flex-direction: row;
-    align-items: fit-content;
+    align-items: stretch;
     background-color: #fff;
     border-radius: 8px;
     overflow: hidden;
