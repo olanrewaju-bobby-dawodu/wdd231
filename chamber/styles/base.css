@@ -181,6 +181,22 @@ section h3 {
   color: var(--primary-color);
 }
 
+.directory-h {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.dark .directory-h,
+section h2,
+section h3 {
+  color: var(--text-color);
+}
+
+.dark .cloud-icon svg {
+  color: var(--text-color);
+}
+
+
 section p {
   margin-bottom: 1rem;
 }
@@ -307,7 +323,7 @@ footer .footer-social a img:hover {
 }
 
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 740px) {
   nav {
     position: static;
     background: none;
@@ -347,16 +363,61 @@ footer .footer-social a img:hover {
   }
 
   #members-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .members-container.grid-view {
+    display: grid !important;
+  }
+
+  .members-container.list-view {
+    display: block !important;
+  }
+   /* Three-column Info Section */
+  .info-panels {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+    .cloud-icon {
+    display: flex;
+  }
+  
+  .members-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .members-card {
+    display: flex;
+    flex-direction: row;
+    align-items: fit-content;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+    .members-card img {
+      width: 50%;
+      object-fit: cover;
+      height: 30%;
+      top: 16rem;
+      position: relative;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+  }
+
 }
 
-/* -------- REDUCED MOTION ------ */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    transition: none !important;
-    animation-duration: 0s !important;
+  /* -------- REDUCED MOTION ------ */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+      animation-duration: 0s !important;
   }
 }
 
@@ -499,4 +560,5 @@ body.dark .members-info {
   border-color: #555;
   color: #f0f0f0;
 }
+
 
