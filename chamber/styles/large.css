@@ -1,0 +1,283 @@
+@media screen and (min-width: 1024px) {
+  /* Header Layout */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+  }
+
+  body,
+  .members-card,
+  header,
+  footer {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .logo-container h1 {
+    font-size: 2rem;
+  }
+
+  nav {
+    display: block;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  #mode {
+    margin-left: 2rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  /* Hero Section */
+  .hero {
+    width: 100%;
+    height: 350px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 1rem;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  /* Three-column Info Section */
+  .info-panels {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .info-box {
+    background-color: #f4f4f4;
+    padding: 1.2rem;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .info-box h3 {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+    padding: 0.5rem 1rem;
+    margin: -1.2rem -1.2rem 1rem -1.2rem;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+
+  .cloud-icon {
+    display: flex;
+  }
+
+  .dark .info-box {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+  }
+
+  .dark .info-box h3 {
+    background-color: #ccc;
+    color: #333;
+  }
+
+  /* Business Cards Grid Layout */
+  .members-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .members-card {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .members-card img {
+    width: 40%;
+    object-fit: cover;
+    height: 50%;
+    top: 9rem;
+    position: relative;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  .members-info {
+    width: 60%;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .members-info h4 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    color: var(--text-color);
+  }
+
+  .members-info .tagline {
+    font-style: italic;
+    color: var(--accent-color2);
+    margin: 0.5rem 0;
+    font-weight: 500;
+  }
+
+  .members-divider {
+    border: none;
+    height: 2px;
+    background-color: #ccc;
+    margin: 0.8rem 0;
+    width: 100%;
+  }
+
+  .dark .members-divider {
+    background-color: #555;
+  }
+
+  .members-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Footer Layout */
+  footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2rem 3rem;
+    background-color: var(--primary-color);
+    color: white;
+  }
+
+  footer .address,
+  footer .social,
+  footer .credits {
+    flex: 1;
+    min-width: 250px;
+    margin: 0.5rem 0;
+  }
+
+  footer .social {
+    text-align: center;
+  }
+
+  footer .credits {
+    text-align: right;
+  }
+
+  footer .social-icons img {
+    width: 28px;
+    height: 28px;
+    margin: 0 0.4rem;
+  }
+
+  #nav.hidden {
+    display: block !important;
+  }
+
+  /* Dark mode styles for business cards */
+.dark .members-card {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+.dark .members-info h4 {
+  color: #f1f1f1;
+}
+
+.dark .members-info .tagline {
+  color: #aaa; /* Lighter tone for visibility */
+}
+
+.dark .members-card:hover {
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Controls */
+.members-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.members-controls button {
+  padding: 0.4rem 1rem;
+  background-color: var(--secondary-color);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.members-controls button:hover {
+  background-color: var(--primary-color);
+}
+
+/* List view overrides */
+.members-container.list-view {
+  display: block;
+}
+
+.members-container.list-view .members-card {
+  display: block;
+  flex-direction: column;
+  box-shadow: none;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  background-color: var(--background-color);
+}
+
+.members-container.list-view .members-card img {
+  display: none;
+}
+
+.members-container.list-view .members-info {
+  padding: 1rem;
+  width: 100%;
+}
+
+/* Dark mode compatibility */
+.dark .members-container.list-view .members-card {
+  background-color: #1f1f1f;
+  border-color: #555;
+  color: #f0f0f0;
+}
+
+}

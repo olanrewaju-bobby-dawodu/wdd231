@@ -1,0 +1,74 @@
+{
+  "members": [
+    {
+      "name": "Sahara Tech Solutions",
+      "address": "123 Desert Road, Central",
+      "phone": "+223 7000 1234",
+      "website": "https://saharatech.com",
+      "image": "saharatech.webp",
+      "membershipLevel": "Gold",
+      "tagline": "Innovating the Sahel",
+      "alt": "Sahara Tech Solutions logo"
+    },
+    {
+      "name": "Oasis Coffee House",
+      "address": "456 Palm Ave, Central",
+      "phone": "+223 7111 5678",
+      "website": "https://oasiscoffee.ml",
+      "image": "oasiscoffee.webp",
+      "membershipLevel": "Silver",
+      "tagline": "Fresh Brews in the Dunes",
+      "alt": "Oasis Coffee House signboard"
+    },
+    {
+      "name": "Dune Logistics",
+      "address": "89 Camel Route, Central",
+      "phone": "+223 7222 3344",
+      "website": "https://dunelogistics.ml",
+      "image": "dunelogistics.webp",
+      "membershipLevel": "Bronze",
+      "tagline": "Delivering Through the Desert",
+      "alt": "Dune Logistics truck"
+    },
+    {
+      "name": "Tuareg Crafts",
+      "address": "101 Artisan St, Central",
+      "phone": "+223 7333 4455",
+      "website": "https://tuaregcrafts.ml",
+      "image": "tuaregcrafts.webp",
+      "membershipLevel": "Silver",
+      "tagline": "Handmade Tuareg Treasures",
+      "alt": "Tuareg jewelry display"
+    },
+    {
+      "name": "Nomad Wear",
+      "address": "78 Market Lane, Central",
+      "phone": "+223 7444 5566",
+      "website": "https://nomadwear.ml",
+      "image": "nomadwear.webp",
+      "membershipLevel": "Gold",
+      "tagline": "Stylish Comfort from the Sahara",
+      "alt": "Nomad Wear clothing line"
+    },
+    {
+      "name": "Timbuktu Tours",
+      "address": "23 Explorer Blvd, Central",
+      "phone": "+223 7555 6677",
+      "website": "https://timbuktutours.ml",
+      "image": "timbuktutours.webp",
+      "membershipLevel": "Gold",
+      "tagline": "Experience the Ancient City",
+      "alt": "Tourists with camels"
+    },
+    {
+      "name": "Sahara Solar Co.",
+      "address": "3 Energy St, Central",
+      "phone": "+223 7666 7788",
+      "website": "https://saharasolar.ml",
+      "image": "saharasolar.webp",
+      "membershipLevel": "Bronze",
+      "tagline": "Powering the Future",
+      "alt": "Solar panels in the desert"
+    }
+  ]
+}

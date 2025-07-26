@@ -1,0 +1,29 @@
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 1.05rem;
+  }
+
+  header {
+    padding: 1rem 2rem;
+  }
+
+  .logo-container h1 {
+    font-size: 1.75rem;
+  }
+
+  nav ul {
+    gap: 1.5rem;
+  }
+
+  main {
+    padding: 2rem;
+  }
+
+  .business-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  footer {
+    font-size: 1rem;
+  }
+}

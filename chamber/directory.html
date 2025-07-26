@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Central Service of Commerce Home Page">
+  <meta name="Olanrewaju Bobby Dawodu" content="Businesses Service Page">
+  <meta property="og:title" content="Central Service of Commerce">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/hero.jpg">
+  <meta property="og:url" content="http://olanrewaju-bobby-dawodu.github.io/wdd231/chamber/directory.html">
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/medium.css" media="(min-width: 601px) and (max-width: 1024px)">
+  <link rel="stylesheet" href="styles/large.css" media="(min-width: 1025px)">
+  <title>Central Service Chamber of Commerce</title>
+</head>
+
+<body>
+<header>
+  <div class="logo-container">
+    <img src="images/logo.svg" alt="Logo">
+    <h1>Central Service</h1>
+  </div>
+  <div class="nav-controls">
+    <button id="mode" aria-label="Toggle Dark Mode">🌙</button>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+    <nav id="nav" class="hidden" role="navigation" aria-label="Main Navigation">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+  <main>
+    <section class="hero">
+      <img src="images/hero.webp" alt="City of Lagos State, Nigeria aerial view" class="responsive-hero">
+      <button class="cta-button">Keynote Tickets</button>
+    </section>
+
+    <h2>Home</h2>
+
+  <section class="info-panels">
+    <div class="info-box events-box">
+      <h3>Events</h3>
+      <p>Check out the latest events in Central Service!</p>
+    </div>
+
+    <div class="info-box current-weather-box">
+      <h3>Current Weather</h3>
+      <div class="cloud-icon">
+      <img src="images/cloud-icon.svg" alt="Cloudy" width="80px" height="80px">
+      <p><strong>75°F</strong><br>Partly Cloudy<br>
+        High: 85°<br>Low: 52°<br>
+        Humidity: 34%<br>
+        Sunrise: 7:30am<br>
+        Sunset: 9:59pm
+      </p>
+      </div>
+    </div>
+
+    <div class="info-box forecast-box">
+      <h3>Weather Forecast</h3>
+      <p><strong>Today:</strong> 90°F</p>
+      <p><strong>Wednesday:</strong> 89°F</p>
+      <p><strong>Thursday:</strong> 68°F</p>
+    </div>
+  </section>
+
+
+    <section class="members-cards">
+      <h3>Featured Members </h3>
+      <div class="members-controls">
+        <button id="gridViewBtn" aria-label="Grid View">🔳 Grid</button>
+        <button id="listViewBtn" aria-label="List View">📋 List</button>
+      </div>
+      <div id="membersContainer" class="members-container"></div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-contact">
+      <p><strong>Central Service of Commerce</strong></p>
+      <p>10 Rue De La Paix<br>Central, Mali 999</p>
+      <p>Email: info@Centralservice.org</p>
+      <p>Phone: (225) 555-2000</p>
+    </div>
+    <div class="footer-social">
+      <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
+      <a href="#"><img src="images/twitter-x.svg" alt="Twitter"></a>
+      <a href="#"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+    </div>
+    <div class="footer-meta">
+      <p>WDD231 Class Project</p>
+      <p>&copy; <span id="currentyear"></span> Central Service of Commerce</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+
+  <script src="scripts/script.js"></script>
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/getdates.js" defer></script>
+</body>
+</html>
