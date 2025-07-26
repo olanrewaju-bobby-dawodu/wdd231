@@ -388,8 +388,8 @@ body.dark nav {
 
 body.dark nav ul li a,
 body.dark .controls button,
-body.dark .memners-card,
-body.dark .memners-info,
+body.dark .members-card,
+body.dark .members-info,
 body.dark main {
   background-color: var(--background-color);
   color: var(--text-color);
