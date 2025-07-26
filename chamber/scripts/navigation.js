@@ -6,8 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // === Hamburger Menu Toggle ===
   hamburger.addEventListener("click", () => {
-    const isOpen = nav.classList.toggle("hidden");
+    nav.classList.toggle("hidden");
     hamburger.classList.toggle("open");
+
+    const isOpen = hamburger.classList.contains("open");
 
     if (isOpen) {
       hamburger.textContent = "✖";
@@ -52,6 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       nav.classList.add("hidden");
       nav.style.left = "-100%";
+      hamburger.classList.remove("open");
+      hamburger.textContent = "☰";
     }
   });
 
@@ -71,7 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const listBtn = document.getElementById("listViewBtn");
   const membersContainer = document.getElementById("membersContainer");
 
-  // Restore saved view
   const savedView = localStorage.getItem("memberView");
   if (savedView === "list") {
     membersContainer.classList.add("list-view");
@@ -79,7 +82,6 @@ document.addEventListener("DOMContentLoaded", () => {
     membersContainer.classList.remove("list-view");
   }
 
-  // Toggle buttons
   if (gridBtn && listBtn && membersContainer) {
     gridBtn.addEventListener("click", () => {
       membersContainer.classList.remove("list-view");
