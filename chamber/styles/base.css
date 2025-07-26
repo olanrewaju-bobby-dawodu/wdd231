@@ -216,7 +216,7 @@ section p {
 }
 
 .members-card img {
-  width: 120px;
+  width: 240px;
   height: auto;
   object-fit: cover;
   border-radius: 6px ;
