@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="WCentralService Chamber of Commerce — Supporting local businesses and community growth.">
+  <meta charset="UTF-8">
   <meta name="author" content="Olanrewaju Bobby Dawodu">
-  <title>CentralService Chamber of Commerce</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Central Service of Commerce Home Page">
+  <meta name="Olanrewaju Bobby Dawodu" content="Businesses Service Page">
+  <meta property="og:title" content="Central Service of Commerce">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://olanrewaju-bobby-dawodu.github.io/wdd231/chamber/images/hero.webp">
+  <meta property="og:description" content="Explore our directory of local businesses in Central Service.">
+  <meta property="og:url" content="https://olanrewaju-bobby-dawodu.github.io/wdd231/chamber/directory.html">
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/base.css">
-  <link rel="stylesheet" href="styles/medium.css">
-  <link rel="stylesheet" href="styles/large.css">
-  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="styles/medium.css" media="(min-width: 601px) and (max-width: 1024px)">
+  <link rel="stylesheet" href="styles/large.css" media="(min-width: 1025px)">
+  <title>CentralService Chamber of Commerce</title>
 </head>
 
 <body>
@@ -38,9 +47,9 @@
     <!-- Hero Section -->
     <section class="hero">
       <picture>
-        <sourc media="(min-width: 1024px)" srcset="images/hero.webp">
+        <source media="(min-width: 1024px)" srcset="images/hero.webp">
         <source media="(min-width: 640px)" srcset="images/hero.webp">
-        <img src="images/ero.webp" alt="Cityscape of Lagos State" loading="lazy">
+        <img src="images/hero.webp" alt="Cityscape of Lagos State" loading="lazy">
       </picture>
       <div class="cta">
         <a href="join.html" class="cta-button">Join the Chamber</a>
@@ -51,15 +60,9 @@
     <section class="info-panels">
         <div class="info-box events-box">
       <h2>Upcoming Events</h2>
+       <p>Check out the latest events in Central Service!</p>
         </div>
-      <article>
-        <h3>Business Breakfast</h3>
-        <p>Friday, 9:00 AM – Meet local entrepreneurs and leaders.</p>
-      </article>
-      <article>
-        <h3>Networking Night</h3>
-        <p>Wednesday, 6:00 PM – Grow your connections with community partners.</p>
-      </article>
+
 
     <!-- Weather Section -->
     <div class="info-box current-weather-box">
@@ -72,6 +75,7 @@
       </div>
       </div>
     </div>
+
       <div class="info-box forecast-box">
         <h3>3-Day Forecast</h3>
         <ul id="forecast-list">
