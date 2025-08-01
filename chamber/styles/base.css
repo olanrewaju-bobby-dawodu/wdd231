@@ -173,7 +173,6 @@ nav ul li a:focus {
 main {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   padding: var(--spacing);
   background-color: var(--background-color);
   color: var(--text-color);
