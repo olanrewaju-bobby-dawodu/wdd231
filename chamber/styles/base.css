@@ -381,6 +381,16 @@ footer .footer-social a img:hover {
     gap: 1.5rem;
     margin-top: 2rem;
   }
+
+    .info-box h2 {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+    padding: 0.5rem 1rem;
+    margin: -1.2rem -1.2rem 1rem -1.2rem;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+  
     .cloud-icon {
     display: flex;
   }
@@ -501,6 +511,11 @@ body.dark .members-info {
 
 .cta-button:hover {
   background-color: var(--secondary-color);
+}
+
+.hero .cta-button {
+  position: relative;
+  top: -4rem;
 }
 
 .dark .members-card img {
