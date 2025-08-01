@@ -66,6 +66,7 @@ header {
 }
 
 .hero {
+  order: 1;
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -182,6 +183,7 @@ section h3 {
 }
 
 .directory-h {
+    order: 2;
     margin-top: 0;
     color: var(--primary-color);
 }
