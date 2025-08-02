@@ -685,3 +685,155 @@ body.dark .members-info {
 .spotlight-cta .cta-button {
   margin-top: 0.75rem;
 }
+
+.dark .discover-grid ul li,
+.dark .discover-grid p {
+  color: var(--accent-color2);
+}
+
+/* ---------- JOIN PAGE: Membership Levels & Form ---------- */
+
+.membership-levels {
+  margin: 2rem 0;
+}
+
+.levels-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  margin-top: 1rem;
+}
+
+.membership-card {
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  background-color: var(--background-color);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.membership-card h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.membership-card p {
+  margin: 0.25rem 0;
+}
+
+.membership-card ul {
+  padding-left: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.membership-card .level-label {
+  font-size: 0.85rem;
+  margin-top: 0.75rem;
+  font-style: italic;
+  color: var(--accent-color2);
+}
+
+.membership-card:hover,
+.membership-card:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+}
+
+/* Application form */
+.application-form {
+  margin: 2rem 0;
+}
+
+.application-form form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.application-form fieldset {
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 1rem 1.25rem;
+  border-radius: 6px;
+}
+
+.application-form legend {
+  font-weight: bold;
+  padding: 0 0.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.form-group label {
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: border-color var(--transition-speed);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(2, 128, 144, 0.25);
+}
+
+.form-actions {
+  margin-top: 0.5rem;
+}
+
+.membership-card + .membership-card {
+  /* optional spacing if horizontal on large screens */
+}
+
+/* Responsive for wider displays */
+@media screen and (min-width: 768px) {
+  .levels-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .application-form form {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .application-form fieldset:nth-child(3) {
+    grid-column: 1 / -1; /* make additional details full width */
+  }
+}
+
+/* Dark mode adjustments */
+body.dark .membership-card {
+  background-color: #1f1f1f;
+  border-color: #444;
+}
+
+body.dark .application-form fieldset {
+  background-color: #1b1b1b;
+  border-color: #444;
+}
+
+body.dark .form-group input,
+body.dark .form-group textarea {
+  background-color: #222;
+  color: var(--text-color);
+  border: 1px solid #444;
+}
+
+body.dark .form-group input:focus,
+body.dark .form-group textarea:focus {
+  box-shadow: 0 0 0 3px rgba(187, 134, 252, 0.4);
+}
