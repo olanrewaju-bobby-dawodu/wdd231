@@ -98,6 +98,12 @@ header {
   margin: 0;
 }
 
+.brand-name {
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
 /* Navigation controls container */
 .nav-controls {
   display: flex;
@@ -811,7 +817,7 @@ body.dark .members-info {
   }
 
   .application-form fieldset:nth-child(3) {
-    grid-column: 1 / -1; /* make additional details full width */
+    grid-column: 1 / -1; 
   }
 }
 
