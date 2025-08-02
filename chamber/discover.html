@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Olanrewaju Bobby Dawodu">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover Central Service: history, demographics, and local highlights.">
+  <meta property="og:title" content="Discover | Central Service Chamber of Commerce">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/discover-hero.webp">
+  <meta property="og:description" content="Learn about the history, people, and culture of Central Service.">
+  <meta property="og:url" content="directory.html">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/medium.css" media="(min-width: 601px) and (max-width: 1024px)">
+  <link rel="stylesheet" href="styles/large.css" media="(min-width: 1025px)">
+  <title>Discover | Central Service Chamber of Commerce</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="images/logo.svg" alt="Central Service Logo">
+      <h1>Discover Central Service</h1>
+    </div>
+    <div class="nav-controls">
+      <button id="mode" aria-label="Toggle Dark Mode">🌙</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+      <nav id="nav" class="hidden" role="navigation" aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html" class="active">Discover</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Primary heading closely matching title and first in main -->
+    <h1 class="page-title">Discover Central Service</h1>
+
+    <!-- Hero / Intro -->
+    <section class="hero">
+      <img src="images/hero.webp" alt="Panoramic view of Central Service region" class="responsive-hero">
+      <p class="hero-tagline">A thriving community built on commerce, culture, and connection.</p>
+    </section>
+
+    <!-- Locale History & Demographics -->
+    <section class="discover-grid">
+      <article class="history-box">
+        <h2>Our History</h2>
+        <p>Central Service was founded in the early 1900s as a trade crossroads. Over the decades it evolved into a vibrant hub for small businesses, artisans, and regional commerce. The chamber has played a pivotal role in supporting growth and preserving local heritage.</p>
+      </article>
+
+      <article class="demographics-box">
+        <h2>Demographics</h2>
+        <ul>
+          <li>Population: ~85,000</li>
+          <li>Median Age: 34</li>
+          <li>Top Industries: Retail, Agriculture, Tech Services</li>
+          <li>Diversity Index: High (multi-ethnic community)</li>
+          <li>Education: 78% with secondary education or higher</li>
+        </ul>
+      </article>
+
+      <article class="events-box">
+        <h2>Current Events</h2>
+        <p><strong>Summer Business Expo:</strong> Showcasing local innovators—July 12th at Central Plaza.</p>
+        <p><strong>Community Market:</strong> Every Saturday, artisan vendors and food stalls.</p>
+        <p><strong>Chamber Networking Breakfast:</strong> First Tuesday of each month.</p>
+      </article>
+    </section>
+
+    <!-- Image Montage -->
+    <section class="image-montage" aria-label="Local highlights image montage">
+      <h2>Local Highlights</h2>
+      <div class="montage-grid">
+        <figure>
+          <img src="images/montage1.jpg" alt="Historic town square">
+          <figcaption>Historic Town Square</figcaption>
+        </figure>
+        <figure>
+          <img src="images/montage2.jpg" alt="Local artisan market">
+          <figcaption>Artisan Market</figcaption>
+        </figure>
+        <figure>
+          <img src="images/montage3.jpg" alt="Community festival">
+          <figcaption>Annual Community Festival</figcaption>
+        </figure>
+        <figure>
+          <img src="images/montage4.jpg" alt="Sunset over the river">
+          <figcaption>Sunset Over the River</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="spotlight-cta">
+      <h2>Become Part of the Story</h2>
+      <p>Join the Central Service Chamber of Commerce to gain visibility, network with peers, and help shape the future of local business.</p>
+      <a href="join.html" class="cta-button">Join Now</a>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-contact">
+      <p><strong>Central Service Chamber of Commerce</strong></p>
+      <p>10 Rue De La Paix<br>Central, Mali 999</p>
+      <p>Email: info@centralservice.org</p>
+      <p>Phone: (225) 555-2000</p>
+    </div>
+    <div class="footer-social">
+      <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
+      <a href="#"><img src="images/twitter-x.svg" alt="Twitter"></a>
+      <a href="#"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+    </div>
+    <div class="footer-meta">
+      <p>WDD231 Class Project</p>
+      <p>&copy; <span id="currentyear"></span> Central Service Chamber of Commerce</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+
+  <script src="scripts/script.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/getdates.js" defer></script>
+</body>
+</html>

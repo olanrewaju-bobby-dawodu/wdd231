@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Olanrewaju Bobby Dawodu">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join the Central Service Chamber of Commerce — membership levels and application.">
+  <meta property="og:title" content="Join | Central Service Chamber of Commerce">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/hero.webp">
+  <meta property="og:description" content="Become a member of the Chamber to promote your business and connect with the community.">
+  <meta property="og:url" content="directory.html">
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/medium.css" media="(min-width: 601px) and (max-width: 1024px)">
+  <link rel="stylesheet" href="styles/large.css" media="(min-width: 1025px)">
+  <title>Join | Central Service Chamber of Commerce</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="images/logo.svg" alt="Central Service Logo">
+      <h1>Central Service</h1>
+    </div>
+    <div class="nav-controls">
+      <button id="mode" aria-label="Toggle Dark Mode">🌙</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+      <nav id="nav" class="hidden" role="navigation" aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html" class="active-nav">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Join the Chamber</h1>
+
+    <section class="membership-levels">
+      <h2>Membership Levels</h2>
+      <p>Choose the level that best fits your organization. Each level offers increasing visibility and benefits.</p>
+
+      <div class="levels-grid">
+        <!-- Non-profit -->
+        <article class="membership-card" aria-label="Non-Profit Membership">
+          <h3>Non-Profit</h3>
+          <p><strong>Price:</strong> Free / Discounted</p>
+          <ul>
+            <li>Basic directory listing</li>
+            <li>Access to select events</li>
+            <li>Community newsletters</li>
+          </ul>
+          <p class="level-label">Best for community-focused organizations</p>
+        </article>
+
+        <!-- Silver -->
+        <article class="membership-card" aria-label="Silver Membership">
+          <h3>Silver</h3>
+          <p><strong>Price:</strong> $150 / year</p>
+          <ul>
+            <li>Featured directory listing</li>
+            <li>Monthly newsletter mention</li>
+            <li>Invitation to networking luncheons</li>
+            <li>Social media shoutouts</li>
+          </ul>
+          <p class="level-label">Ideal for growing businesses</p>
+        </article>
+
+        <!-- Gold -->
+        <article class="membership-card" aria-label="Gold Membership">
+          <h3>Gold</h3>
+          <p><strong>Price:</strong> $350 / year</p>
+          <ul>
+            <li>Premium directory placement</li>
+            <li>Sponsored content in publications</li>
+            <li>Priority event access</li>
+            <li>Custom social campaigns</li>
+            <li>Quarterly strategy consult</li>
+          </ul>
+          <p class="level-label">Best for established leaders</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="application-form">
+      <h2>Membership Application</h2>
+      <p>Please fill out the form below to apply. Fields marked with <span aria-label="required">*</span> are required.</p>
+
+      <form id="joinForm" novalidate>
+        <fieldset>
+          <legend>Contact Information</legend>
+          <div class="form-group">
+            <label for="orgName">Organization Name <span aria-label="required">*</span></label>
+            <input type="text" id="orgName" name="organization" required />
+          </div>
+          <div class="form-group">
+            <label for="contactName">Primary Contact Name <span aria-label="required">*</span></label>
+            <input type="text" id="contactName" name="contact" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email <span aria-label="required">*</span></label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" />
+          </div>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <textarea id="address" name="address" rows="2"></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Membership Level</legend>
+          <div class="form-group">
+            <label>
+              <input type="radio" name="level" value="non-profit" required />
+              Non-Profit
+            </label>
+          </div>
+          <div class="form-group">
+            <label>
+              <input type="radio" name="level" value="silver" />
+              Silver
+            </label>
+          </div>
+          <div class="form-group">
+            <label>
+              <input type="radio" name="level" value="gold" />
+              Gold
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Additional Details</legend>
+          <div class="form-group">
+            <label for="website">Website</label>
+            <input type="url" id="website" name="website" placeholder="https://example.com" />
+          </div>
+          <div class="form-group">
+            <label for="comments">Why do you want to join?</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Tell us about your business or goals."></textarea>
+          </div>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="submit" class="cta-button">Submit Application</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-contact">
+      <p><strong>Central Service of Commerce</strong></p>
+      <p>10 Rue De La Paix<br>Central, Mali 999</p>
+      <p>Email: info@Centralservice.org</p>
+      <p>Phone: (225) 555-2000</p>
+    </div>
+    <div class="footer-social">
+      <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
+      <a href="#"><img src="images/twitter-x.svg" alt="Twitter"></a>
+      <a href="#"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+    </div>
+    <div class="footer-meta">
+      <p>WDD231 Class Project</p>
+      <p>&copy; <span id="currentyear"></span> Central Service of Commerce</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+
+  <script src="scripts/script.js"></script>
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/getdates.js" defer></script>
+</body>
+</html>
