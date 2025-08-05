@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Art & Photography Showcase — Site Plan</title>
+  <meta name="description" content="Site plan for the Art & Photography Showcase project: purpose, scenarios, color scheme, typography, and wireframes." />
+  <meta name="author" content="Your Name" />
+  <meta property="og:title" content="Art & Photography Showcase Site Plan" />
+  <meta property="og:description" content="Planning document for the three-page dynamic art/gallery website." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles/base.css" />
+</head>
+<body>
+  <header>
+    <h1 class="logo">Art &amp; Photography Showcase</h1>
+    <nav aria-label="site plan navigation">
+      <span class="nav-label">Site Plan</span>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="site-name">
+      <h2 id="site-name">Site Name &amp; Reason</h2>
+      <p><strong>Site Name:</strong> Art &amp; Photography Showcase</p>
+      <p><strong>Reason / Purpose Summary:</strong> To build an engaging, accessible, and responsive platform that displays curated visual artwork and photography while practicing dynamic web development techniques like data fetching, modals, and user preference persistence.</p>
+    </section>
+
+    <section aria-labelledby="site-purpose">
+      <h2 id="site-purpose">Site Purpose</h2>
+      <p>The site provides curated artwork and photography to visitors, allowing them to browse pieces, learn about the artists and background, and explore featured/exhibition content. It delivers information visually and interactively through dynamic gallery rendering, accessible modals, and personalized display preferences.</p>
+    </section>
+
+    <section aria-labelledby="scenarios">
+      <h2 id="scenarios">User Scenarios</h2>
+      <ul class="scenarios">
+        <li>1. A visitor wants to browse a collection of artworks to get inspiration for their own creative projects.</li>
+        <li>2. A visitor wants to learn more about a specific artist and the story behind a piece.</li>
+        <li>3. A visitor wants to see upcoming exhibitions or featured works on the home page.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="color-scheme">
+      <h2 id="color-scheme">Color Scheme &amp; Usage</h2>
+      <div class="flex">
+        <div class="card">
+          <div class="swatch-row">
+            <div class="color-swatch bg-charcoal"></div>
+            <div>
+              <div class="swatch-label"><strong>--color-bg</strong> (Dark charcoal)</div>
+              <div class="swatch-label">Used for: headers, backgrounds, contrast panels.</div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="swatch-row">
+            <div class="color-swatch accent1"></div>
+            <div>
+              <div class="swatch-label"><strong>--color-accent1</strong> (Warm beige)</div>
+              <div class="swatch-label">Used for: highlights, badges, button backgrounds.</div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="swatch-row">
+            <div class="color-swatch accent2"></div>
+            <div>
+              <div class="swatch-label"><strong>--color-accent2</strong> (Muted rose)</div>
+              <div class="swatch-label">Used for: interactive elements, labels, wireframe accents.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p>Text colors adapt: light text on dark backgrounds and dark text on light areas to maintain readability and contrast.</p>
+    </section>
+
+    <section aria-labelledby="typography">
+      <h2 id="typography">Typography</h2>
+      <p><strong>Fonts:</strong></p>
+      <ul class="usage-list">
+        <li><strong>Playfair Display</strong> (serif): used for headings/titles to give an artistic, elegant feel. Example:</li>
+      </ul>
+      <div class="font-example heading-example">
+        Heading example: Art &amp; Photography Showcase
+      </div>
+      <ul class="usage-list" style="margin-top:.75rem;">
+        <li><strong>Open Sans</strong> (sans-serif): used for body copy, descriptions, and navigation for clarity and readability. Example:</li>
+      </ul>
+      <div class="font-example body-example">
+        Body example: This site displays a curated collection of artworks with dynamic filtering and accessible modals.
+      </div>
+    </section>
+
+    <section aria-labelledby="wireframes">
+      <h2 id="wireframes">Wireframes</h2>
+
+      <div class="wireframe" aria-label="Mobile wireframe">
+        <h3>Home Page — Mobile View</h3>
+        <div class="device mobile">
+          <div class="screen">
+            <div class="label">Header: logo + hamburger nav</div>
+            <div class="pill">Hero with featured artwork</div>
+            <div class="pill">Intro text</div>
+            <div class="pill">Upcoming exhibitions</div>
+            <div class="pill">Footer with video link & attribution</div>
+          </div>
+        </div>
+        <p class="wire-desc">Stacked vertical layout; tap targets spaced; collapsible menu.</p>
+      </div>
+
+      <div class="wireframe" aria-label="Desktop wireframe">
+        <h3>Home Page — Desktop/Wide View</h3>
+        <div class="device desktop">
+          <div class="screen">
+            <div class="label">Header: logo + horizontal nav</div>
+            <div class="pill">Full-width hero spotlight</div>
+            <div class="pill">Featured works in grid</div>
+            <div class="pill">Events/Upcoming in side panel</div>
+            <div class="pill">Footer with links & video</div>
+          </div>
+        </div>
+        <p class="wire-desc">Multi-column presentation emphasizing featured content and events side-by-side.</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>Site Plan for Art &amp; Photography Showcase. Fonts loaded from Google Fonts. Colors demonstrated in the color scheme section above. Created to satisfy WDD 231 Week 5 requirements.</p>
+    </footer>
+  </main>
+</body>
+</html>
