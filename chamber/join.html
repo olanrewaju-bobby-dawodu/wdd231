@@ -46,10 +46,10 @@
 
     <section class="membership-levels">
       <h2>Membership Levels</h2>
-      <p>Click a membership card to select a level. Benefits are listed below each option.</p>
+      <p>Choose the level that best fits your organization. Each level offers increasing visibility and benefits.</p>
 
       <div class="levels-grid">
-        <article class="membership-card" data-level="non-profit">
+        <article class="membership-card" aria-label="Non-Profit Membership" data-level="non-profit">
           <h3>Non-Profit</h3>
           <p><strong>Price:</strong> Free / Discounted</p>
           <ul>
@@ -60,7 +60,7 @@
           <p class="level-label">Best for community-focused organizations</p>
         </article>
 
-        <article class="membership-card" data-level="silver">
+        <article class="membership-card" aria-label="Silver Membership" data-level="silver">
           <h3>Silver</h3>
           <p><strong>Price:</strong> $150 / year</p>
           <ul>
@@ -72,7 +72,7 @@
           <p class="level-label">Ideal for growing businesses</p>
         </article>
 
-        <article class="membership-card" data-level="gold">
+        <article class="membership-card" aria-label="Gold Membership" data-level="gold">
           <h3>Gold</h3>
           <p><strong>Price:</strong> $350 / year</p>
           <ul>
@@ -89,52 +89,76 @@
 
     <section class="application-form">
       <h2>Membership Application</h2>
-      <p>Please fill out the form below. Fields marked with <span aria-label="required">*</span> are required.</p>
+      <p>Please fill out the form below to apply. Fields marked with <span aria-label="required">*</span> are required.</p>
 
       <form id="joinForm" action="thankyou.html" method="get">
         <fieldset>
           <legend>Contact Information</legend>
+
           <div class="form-group">
             <label for="orgName">Organization Name <span aria-label="required">*</span></label>
             <input type="text" id="orgName" name="organization" required />
           </div>
+
           <div class="form-group">
             <label for="contactName">Primary Contact Name <span aria-label="required">*</span></label>
             <input type="text" id="contactName" name="contact" required />
           </div>
+
+          <div class="form-group">
+            <label for="jobTitle">Job Title <span aria-label="required">*</span></label>
+            <input type="text" id="jobTitle" name="jobTitle" required />
+          </div>
+
+          <div class="form-group">
+            <label for="sector">Business Sector</label>
+            <input type="text" id="sector" name="sector" />
+          </div>
+
           <div class="form-group">
             <label for="email">Email <span aria-label="required">*</span></label>
             <input type="email" id="email" name="email" required />
           </div>
+
           <div class="form-group">
             <label for="phone">Phone</label>
             <input type="tel" id="phone" name="phone" />
-          </div>
-          <div class="form-group">
-            <label for="address">Address</label>
-            <textarea id="address" name="address" rows="2"></textarea>
           </div>
         </fieldset>
 
         <fieldset>
           <legend>Membership Level</legend>
+
           <div class="form-group">
-            <label><input type="radio" name="level" value="non-profit" required /> Non-Profit</label>
+            <label>
+              <input type="radio" name="level" value="non-profit" required />
+              Non-Profit
+            </label>
           </div>
+
           <div class="form-group">
-            <label><input type="radio" name="level" value="silver" /> Silver</label>
+            <label>
+              <input type="radio" name="level" value="silver" />
+              Silver
+            </label>
           </div>
+
           <div class="form-group">
-            <label><input type="radio" name="level" value="gold" /> Gold</label>
+            <label>
+              <input type="radio" name="level" value="gold" />
+              Gold
+            </label>
           </div>
         </fieldset>
 
         <fieldset>
           <legend>Additional Details</legend>
+
           <div class="form-group">
             <label for="website">Website</label>
             <input type="url" id="website" name="website" placeholder="https://example.com" />
           </div>
+
           <div class="form-group">
             <label for="comments">Why do you want to join?</label>
             <textarea id="comments" name="comments" rows="4" placeholder="Tell us about your business or goals."></textarea>
@@ -169,31 +193,18 @@
     </div>
   </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // Set timestamp
-      const timestamp = document.getElementById("timestamp");
-      if (timestamp) timestamp.value = new Date().toISOString();
-
-      // Select membership level by clicking a card
-      const cards = document.querySelectorAll(".membership-card");
-      const radios = document.querySelectorAll("input[name='level']");
-
-      cards.forEach(card => {
-        card.addEventListener("click", () => {
-          const level = card.getAttribute("data-level");
-          radios.forEach(radio => {
-            radio.checked = radio.value === level;
-          });
-
-          cards.forEach(c => c.classList.remove("selected"));
-          card.classList.add("selected");
-        });
-      });
-    });
-  </script>
-
+  <script src="scripts/script.js"></script>
+  <script src="scripts/scripts.js"></script>
   <script src="scripts/navigation.js" defer></script>
   <script src="scripts/getdates.js" defer></script>
+  <script>
+    // Timestamp population
+    document.addEventListener("DOMContentLoaded", () => {
+      const timestampField = document.getElementById("timestamp");
+      if (timestampField) {
+        timestampField.value = new Date().toISOString();
+      }
+    });
+  </script>
 </body>
 </html>
