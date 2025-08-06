@@ -41,144 +41,88 @@
     </div>
   </header>
 
-  <main>
-    <h1>Join | Central Service</h1>
+<main>
+    <section class="membership-cards">
+      <h2>Select Your Membership Level</h2>
 
-    <section class="membership-levels">
-      <h2>Membership Levels</h2>
-      <p>Choose the level that best fits your organization. Each level offers increasing visibility and benefits.</p>
-
-      <div class="levels-grid">
-        <article class="membership-card" aria-label="Non-Profit Membership" data-level="non-profit">
+      <div class="card-container">
+        <!-- Non-Profit -->
+        <article class="membership-card" data-level="Non-Profit">
           <h3>Non-Profit</h3>
-          <p><strong>Price:</strong> Free / Discounted</p>
-          <ul>
-            <li>Basic directory listing</li>
-            <li>Access to select events</li>
-            <li>Community newsletters</li>
-          </ul>
-          <p class="level-label">Best for community-focused organizations</p>
+          <p>Free membership for registered non-profit organizations.</p>
+          <button type="button" onclick="openModal('modal-NonProfit')">Learn More</button>
         </article>
 
-        <article class="membership-card" aria-label="Silver Membership" data-level="silver">
+        <!-- Silver -->
+        <article class="membership-card" data-level="Silver">
           <h3>Silver</h3>
-          <p><strong>Price:</strong> $150 / year</p>
-          <ul>
-            <li>Featured directory listing</li>
-            <li>Monthly newsletter mention</li>
-            <li>Invitation to networking luncheons</li>
-            <li>Social media shoutouts</li>
-          </ul>
-          <p class="level-label">Ideal for growing businesses</p>
+          <p>$100/year — Great for small businesses looking for local exposure.</p>
+          <button type="button" onclick="openModal('modal-Silver')">Learn More</button>
         </article>
 
-        <article class="membership-card" aria-label="Gold Membership" data-level="gold">
+        <!-- Gold -->
+        <article class="membership-card" data-level="Gold">
           <h3>Gold</h3>
-          <p><strong>Price:</strong> $350 / year</p>
-          <ul>
-            <li>Premium directory placement</li>
-            <li>Sponsored content in publications</li>
-            <li>Priority event access</li>
-            <li>Custom social campaigns</li>
-            <li>Quarterly strategy consult</li>
-          </ul>
-          <p class="level-label">Best for established leaders</p>
+          <p>$250/year — Premium listing, events, and promotion opportunities.</p>
+          <button type="button" onclick="openModal('modal-Gold')">Learn More</button>
         </article>
       </div>
+
+      <!-- Hidden radio buttons for level selection -->
+      <input type="radio" name="membership" value="Non-Profit" id="level-Non-Profit" hidden required />
+      <input type="radio" name="membership" value="Silver" id="level-Silver" hidden />
+      <input type="radio" name="membership" value="Gold" id="level-Gold" hidden />
     </section>
 
-    <section class="application-form">
-      <h2>Membership Application</h2>
-      <p>Please fill out the form below to apply. Fields marked with <span aria-label="required">*</span> are required.</p>
+    <form action="thankyou.html" method="get" id="joinForm">
+      <fieldset>
+        <legend>Business Information</legend>
 
-      <form id="joinForm" action="thankyou.html" method="get">
-        <fieldset>
-          <legend>Contact Information</legend>
+        <label for="orgName">Organization Name*</label>
+        <input type="text" id="orgName" name="orgName" required pattern="[A-Za-z0-9\s\.\-&]{2,}" autocomplete="organization" />
 
-          <div class="form-group">
-            <label for="orgName">Organization Name <span aria-label="required">*</span></label>
-            <input type="text" id="orgName" name="organization" required />
-          </div>
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com" />
 
-          <div class="form-group">
-            <label for="contactName">Primary Contact Name <span aria-label="required">*</span></label>
-            <input type="text" id="contactName" name="contact" required />
-          </div>
+        <label for="phone">Phone*</label>
+        <input type="tel" id="phone" name="phone" required autocomplete="tel" />
 
-          <div class="form-group">
-            <label for="jobTitle">Job Title <span aria-label="required">*</span></label>
-            <input type="text" id="jobTitle" name="jobTitle" required />
-          </div>
+        <label for="website">Website</label>
+        <input type="url" id="website" name="website" autocomplete="url" />
+      </fieldset>
 
-          <div class="form-group">
-            <label for="sector">Business Sector</label>
-            <input type="text" id="sector" name="sector" />
-          </div>
+      <fieldset>
+        <legend>Contact Information</legend>
 
-          <div class="form-group">
-            <label for="email">Email <span aria-label="required">*</span></label>
-            <input type="email" id="email" name="email" required />
-          </div>
+        <label for="firstName">First Name*</label>
+        <input type="text" id="firstName" name="firstName" required autocomplete="given-name" />
 
-          <div class="form-group">
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" />
-          </div>
-        </fieldset>
+        <label for="lastName">Last Name*</label>
+        <input type="text" id="lastName" name="lastName" required autocomplete="family-name" />
 
-        <fieldset>
-          <legend>Membership Level</legend>
+        <label for="title">Your Title*</label>
+        <input type="text" id="title" name="title" required pattern="[A-Za-z\s\-\.]{2,}" autocomplete="honorific-suffix" />
+      </fieldset>
 
-          <div class="form-group">
-            <label>
-              <input type="radio" name="level" value="non-profit" required />
-              Non-Profit
-            </label>
-          </div>
+      <fieldset>
+        <legend>Description</legend>
 
-          <div class="form-group">
-            <label>
-              <input type="radio" name="level" value="silver" />
-              Silver
-            </label>
-          </div>
+        <label for="description">Brief Description of Your Business</label>
+        <textarea id="description" name="description" rows="4" maxlength="500" autocomplete="off"></textarea>
+      </fieldset>
 
-          <div class="form-group">
-            <label>
-              <input type="radio" name="level" value="gold" />
-              Gold
-            </label>
-          </div>
-        </fieldset>
+      <!-- Hidden timestamp -->
+      <input type="hidden" name="timestamp" id="timestamp" />
 
-        <fieldset>
-          <legend>Additional Details</legend>
-
-          <div class="form-group">
-            <label for="website">Website</label>
-            <input type="url" id="website" name="website" placeholder="https://example.com" />
-          </div>
-
-          <div class="form-group">
-            <label for="comments">Why do you want to join?</label>
-            <textarea id="comments" name="comments" rows="4" placeholder="Tell us about your business or goals."></textarea>
-          </div>
-        </fieldset>
-
-        <input type="hidden" name="timestamp" id="timestamp">
-
-        <div class="form-actions">
-          <button type="submit" class="cta-button">Submit Application</button>
-        </div>
-      </form>
-    </section>
+      <button type="submit">Join Now</button>
+    </form>
   </main>
 
   <footer role="contentinfo">
     <div class="footer-contact">
-      <p><strong>Central Service of Commerce</strong></p>
+      <p><strong>Central Service Chamber of Commerce</strong></p>
       <p>10 Rue De La Paix<br>Central, Mali 999</p>
-      <p>Email: info@Centralservice.org</p>
+      <p>Email: info@centralservice.org</p>
       <p>Phone: (225) 555-2000</p>
     </div>
     <div class="footer-social">
@@ -188,23 +132,60 @@
     </div>
     <div class="footer-meta">
       <p>WDD231 Class Project</p>
-      <p>&copy; <span id="currentyear"></span> Central Service of Commerce</p>
+      <p>&copy; <span id="currentyear"></span> Central Service Chamber of Commerce</p>
       <p>Last Modified: <span id="lastModified"></span></p>
     </div>
   </footer>
 
-  <script src="scripts/script.js"></script>
-  <script src="scripts/scripts.js"></script>
+  <!-- Modal dialogs -->
+  <dialog id="modal-NonProfit">
+    <h2>Non-Profit Membership</h2>
+    <p>Designed for charitable organizations to gain community visibility and collaborate on service events.</p>
+    <button onclick="closeModal('modal-NonProfit')">Close</button>
+  </dialog>
+
+  <dialog id="modal-Silver">
+    <h2>Silver Membership</h2>
+    <p>Great for growing businesses. Get listed in the directory, attend monthly mixers, and display your logo at events.</p>
+    <button onclick="closeModal('modal-Silver')">Close</button>
+  </dialog>
+
+  <dialog id="modal-Gold">
+    <h2>Gold Membership</h2>
+    <p>All Silver benefits plus homepage spotlight, featured newsletter ads, and exclusive sponsorships.</p>
+    <button onclick="closeModal('modal-Gold')">Close</button>
+  </dialog>
+
+  <script>
+    // Set last modified date
+    document.getElementById("lastModified").textContent = document.lastModified;
+
+    // Set timestamp on form load
+    document.getElementById("timestamp").value = new Date().toISOString();
+
+    // Handle membership card click
+    document.querySelectorAll('.membership-card').forEach(card => {
+      card.addEventListener('click', function () {
+        const level = this.dataset.level;
+        document.querySelectorAll('input[name="membership"]').forEach(r => r.checked = false);
+        document.getElementById(`level-${level}`).checked = true;
+
+        document.querySelectorAll('.membership-card').forEach(c => c.classList.remove('selected'));
+        this.classList.add('selected');
+      });
+    });
+
+    function openModal(id) {
+      document.getElementById(id).showModal();
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).close();
+    }
+  </script>
+
+  <script src="scripts/script.js" defer></script>
   <script src="scripts/navigation.js" defer></script>
   <script src="scripts/getdates.js" defer></script>
-  <script>
-    // Timestamp population
-    document.addEventListener("DOMContentLoaded", () => {
-      const timestampField = document.getElementById("timestamp");
-      if (timestampField) {
-        timestampField.value = new Date().toISOString();
-      }
-    });
-  </script>
 </body>
 </html>

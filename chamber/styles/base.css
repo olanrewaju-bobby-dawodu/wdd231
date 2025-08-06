@@ -897,3 +897,22 @@ body.dark .form-group textarea:focus {
   }
 }
 
+.membership-card {
+  border: 2px solid #ccc;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.membership-card.selected {
+  border-color: #0077cc;
+  background-color: #f0f8ff;
+}
+
+dialog {
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
