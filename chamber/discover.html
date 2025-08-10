@@ -41,10 +41,13 @@
   <main>
     <h1 class="directory-h">Discover | Central Service</h1>
 
+    <!-- Last Visit Message -->
+    <section id="visit-message" class="visit-message"></section>
+
     <!-- Hero / Intro -->
     <section class="hero">
-      <img src="images/hero.webp" alt="Panoramic view of Central Service region" class="responsive-hero">
-      <a href="join.html" class="cta-button">A thriving community built on commerce, culture, and connection. join the Chamber</a>
+      <img src="images/hero.webp" alt="Panoramic view of Central Service region" class="responsive-hero" loading="lazy">
+      <a href="join.html" class="cta-button">A thriving community built on commerce, culture, and connection. Join the Chamber</a>
     </section>
 
     <!-- Locale History & Demographics -->
@@ -73,24 +76,36 @@
       </article>
     </section>
 
+    <!-- JSON Business Cards -->
+   <section class="members-cards">
+      <h3>Featured Local Bussiness </h3>
+      <div class="members-controls">
+        <button id="gridViewBtn" aria-label="Grid View">🔳 Grid</button>
+        <button id="listViewBtn" aria-label="List View">📋 List</button>
+      </div>
+      <div id="membersContainer" class="members-container">
+        <!-- JS will dynamically load 2–3 Silver/Gold member cards -->
+      </div>
+    </section>
+
     <!-- Image Montage -->
     <section class="image-montage" aria-label="Local highlights image montage">
       <h2>Local Highlights</h2>
       <div class="montage-grid">
         <figure>
-          <img src="images/montage1.jpg" alt="Historic town square">
+          <img src="images/montage1.jpg" alt="Historic town square" loading="lazy">
           <figcaption>Historic Town Square</figcaption>
         </figure>
         <figure>
-          <img src="images/montage2.jpg" alt="Local artisan market">
+          <img src="images/montage2.jpg" alt="Local artisan market" loading="lazy">
           <figcaption>Artisan Market</figcaption>
         </figure>
         <figure>
-          <img src="images/montage3.jpg" alt="Community festival">
+          <img src="images/montage3.jpg" alt="Community festival" loading="lazy">
           <figcaption>Annual Community Festival</figcaption>
         </figure>
         <figure>
-          <img src="images/montage4.jpg" alt="Sunset over the river">
+          <img src="images/montage4.jpg" alt="Sunset over the river" loading="lazy">
           <figcaption>Sunset Over the River</figcaption>
         </figure>
       </div>
@@ -126,5 +141,6 @@
   <script src="scripts/script.js" defer></script>
   <script src="scripts/navigation.js" defer></script>
   <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/discover.js" defer></script>
 </body>
 </html>

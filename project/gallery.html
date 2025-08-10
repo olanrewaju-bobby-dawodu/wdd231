@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore the gallery of featured artworks including images, titles, artists, and historical details." />
+  <title>Gallery | Artistry Archives</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/large.css" media="(min-width: 1024px)" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="images/logo.png" alt="Artistry Archives Logo" class="logo" />
+      <h1>Artistry Archives</h1>
+      <button id="menu-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+    </div>
+    <nav id="primary-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="form.html">Submit</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Gallery of Masterpieces</h2>
+      <p>Discover a curated collection of artworks spanning periods and cultures.</p>
+    </section>
+
+    <section id="artwork-gallery" class="gallery-grid">
+      <!-- JavaScript will load artwork cards here -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Artistry Archives</p>
+    <nav>
+      <a href="site-plan.html">Site Plan</a> |
+      <a href="wireframes.html">Wireframes</a> |
+      <a href="https://www.youtube.com/watch?v=demo" target="_blank">Video Demo</a>
+    </nav>
+    <p>Last Updated: <span id="last-modified"></span></p>
+  </footer>
+
+  <script type="module" src="scripts/gallery.js"></script>
+  <script src="scripts/base.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+{
+  "artworks": [
+    {
+      "title": "Starry Night",
+      "artist": "Vincent van Gogh",
+      "year": "1889",
+      "medium": "Oil on canvas",
+      "image": "images/starry-night.jpg"
+    },
+    {
+      "title": "The Persistence of Memory",
+      "artist": "Salvador Dalí",
+      "year": "1931",
+      "medium": "Oil on canvas",
+      "image": "images/persistence-of-memory.jpg"
+    },
+    {
+      "title": "The Scream",
+      "artist": "Edvard Munch",
+      "year": "1893",
+      "medium": "Oil, tempera, pastel on cardboard",
+      "image": "images/the-scream.jpg"
+    },
+    {
+      "title": "Girl with a Pearl Earring",
+      "artist": "Johannes Vermeer",
+      "year": "1665",
+      "medium": "Oil on canvas",
+      "image": "images/girl-with-pearl-earring.jpg"
+    },
+    {
+      "title": "Mona Lisa",
+      "artist": "Leonardo da Vinci",
+      "year": "1503",
+      "medium": "Oil on poplar",
+      "image": "images/mona-lisa.jpg"
+    },
+    {
+      "title": "The Birth of Venus",
+      "artist": "Sandro Botticelli",
+      "year": "1486",
+      "medium": "Tempera on canvas",
+      "image": "images/birth-of-venus.jpg"
+    },
+    {
+      "title": "Guernica",
+      "artist": "Pablo Picasso",
+      "year": "1937",
+      "medium": "Oil on canvas",
+      "image": "images/guernica.jpg"
+    },
+    {
+      "title": "American Gothic",
+      "artist": "Grant Wood",
+      "year": "1930",
+      "medium": "Oil on beaverboard",
+      "image": "images/american-gothic.jpg"
+    },
+    {
+      "title": "The Night Watch",
+      "artist": "Rembrandt van Rijn",
+      "year": "1642",
+      "medium": "Oil on canvas",
+      "image": "images/night-watch.jpg"
+    },
+    {
+      "title": "The Kiss",
+      "artist": "Gustav Klimt",
+      "year": "1908",
+      "medium": "Oil and gold leaf on canvas",
+      "image": "images/the-kiss.jpg"
+    },
+    {
+      "title": "Water Lilies",
+      "artist": "Claude Monet",
+      "year": "1916",
+      "medium": "Oil on canvas",
+      "image": "images/water-lilies.jpg"
+    },
+    {
+      "title": "Campbell's Soup Cans",
+      "artist": "Andy Warhol",
+      "year": "1962",
+      "medium": "Synthetic polymer paint on canvas",
+      "image": "images/soup-cans.jpg"
+    },
+    {
+      "title": "Nighthawks",
+      "artist": "Edward Hopper",
+      "year": "1942",
+      "medium": "Oil on canvas",
+      "image": "images/nighthawks.jpg"
+    },
+    {
+      "title": "Las Meninas",
+      "artist": "Diego Velázquez",
+      "year": "1656",
+      "medium": "Oil on canvas",
+      "image": "images/las-meninas.jpg"
+    },
+    {
+      "title": "Liberty Leading the People",
+      "artist": "Eugène Delacroix",
+      "year": "1830",
+      "medium": "Oil on canvas",
+      "image": "images/liberty-leading-the-people.jpg"
+    }
+  ]
+}
