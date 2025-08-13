@@ -42,7 +42,7 @@
     <h1 class="directory-h">Discover | Central Service</h1>
 
     <!-- Last Visit Message -->
-    <section id="visit-message" class="visit-message"></section>
+    <section id="visit-message" class="visit-message" aria-live="polite"></section>
 
     <!-- Hero / Intro -->
     <section class="hero">
@@ -77,16 +77,18 @@
     </section>
 
     <!-- JSON Business Cards -->
-   <section class="members-cards">
-      <h3>Featured Local Bussiness </h3>
+    <section class="members-cards">
+      <h3>Featured Local Businesses</h3>
       <div class="members-controls">
         <button id="gridViewBtn" aria-label="Grid View">🔳 Grid</button>
         <button id="listViewBtn" aria-label="List View">📋 List</button>
       </div>
       <div id="membersContainer" class="members-container">
-        <!-- JS will dynamically load 2–3 Silver/Gold member cards -->
+        <!-- Cards from JSON will be inserted here -->
       </div>
     </section>
+
+    <input type="hidden" name="timestamp" id="timestamp" />
 
     <!-- Image Montage -->
     <section class="image-montage" aria-label="Local highlights image montage">
@@ -138,9 +140,43 @@
     </div>
   </footer>
 
+  <script>
+    // Store timestamp for form submissions
+    document.getElementById("timestamp").value = new Date().toISOString();
+
+    // LocalStorage last-visit message
+    const visitMsg = document.getElementById('visit-message');
+    const lastVisit = localStorage.getItem('lastVisit');
+    const now = Date.now();
+
+    if (lastVisit) {
+      const daysDiff = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
+      visitMsg.textContent = daysDiff === 0
+        ? "Welcome back! You last visited today."
+        : `Welcome back! Your last visit was ${daysDiff} day(s) ago.`;
+    } else {
+      visitMsg.textContent = "Welcome! This is your first visit.";
+    }
+
+    localStorage.setItem('lastVisit', now);
+  </script>
+
+  <!-- Learn More Modal -->
+<div id="learnMoreModal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal" class="close">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <img id="modalImage" alt="">
+    <p id="modalDescription"></p>
+    <p><strong>Address:</strong> <span id="modalAddress"></span></p>
+    <p><strong>Phone:</strong> <span id="modalPhone"></span></p>
+    <a id="modalWebsite" href="#" target="_blank">Visit Website</a>
+  </div>
+</div>
+
   <script src="scripts/script.js" defer></script>
   <script src="scripts/navigation.js" defer></script>
   <script src="scripts/getdates.js" defer></script>
-  <script src="scripts/discover.js" defer></script>
+  
 </body>
 </html>

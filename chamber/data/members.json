@@ -8,6 +8,7 @@
       "image": "saharatech.webp",
       "membershipLevel": "Gold",
       "tagline": "Innovating the Sahel",
+      "description": "Providing advanced IT services and digital solutions to connect and empower desert communities.",
       "alt": "Sahara Tech Solutions logo"
     },
     {
@@ -18,6 +19,7 @@
       "image": "oasiscoffee.webp",
       "membershipLevel": "Silver",
       "tagline": "Fresh Brews in the Dunes",
+      "description": "A cozy coffee shop offering premium roasts and a relaxing space for locals and travelers alike.",
       "alt": "Oasis Coffee House signboard"
     },
     {
@@ -28,6 +30,7 @@
       "image": "dunelogistics.webp",
       "membershipLevel": "Bronze",
       "tagline": "Delivering Through the Desert",
+      "description": "Specializing in reliable transport and cargo delivery across the challenging Saharan terrain.",
       "alt": "Dune Logistics truck"
     },
     {
@@ -38,6 +41,7 @@
       "image": "tuaregcrafts.webp",
       "membershipLevel": "Silver",
       "tagline": "Handmade Tuareg Treasures",
+      "description": "Offering authentic handmade jewelry, textiles, and art crafted by Tuareg artisans.",
       "alt": "Tuareg jewelry display"
     },
     {
@@ -48,6 +52,7 @@
       "image": "nomadwear.webp",
       "membershipLevel": "Gold",
       "tagline": "Stylish Comfort from the Sahara",
+      "description": "Fashion line combining traditional desert wear with modern comfort and elegance.",
       "alt": "Nomad Wear clothing line"
     },
     {
@@ -58,6 +63,7 @@
       "image": "timbuktutours.webp",
       "membershipLevel": "Gold",
       "tagline": "Experience the Ancient City",
+      "description": "Guided tours that showcase the rich history, culture, and architecture of Timbuktu.",
       "alt": "Tourists with camels"
     },
     {
@@ -68,7 +74,19 @@
       "image": "saharasolar.webp",
       "membershipLevel": "Bronze",
       "tagline": "Powering the Future",
+      "description": "Providing sustainable solar energy solutions for homes and businesses in the desert.",
       "alt": "Solar panels in the desert"
+    },
+    {
+      "name": "Desert Wellness Spa",
+      "address": "12 Oasis Road, Central",
+      "phone": "+223 7999 8899",
+      "website": "https://desertspa.ml",
+      "image": "desertspa.webp",
+      "membershipLevel": "Silver",
+      "tagline": "Relaxation in the Heart of the Desert",
+      "description": "A luxury spa offering traditional and modern treatments for ultimate relaxation.",
+      "alt": "Spa massage bed in desert setting"
     }
   ]
 }
