@@ -42,7 +42,6 @@ header {
   font-weight: bold;
 }
 
-/* Menu toggle button */
 .menu-toggle {
   background: none;
   border: none;
@@ -52,18 +51,11 @@ header {
   display: block;
 }
 
-#menu-toggle {
-  font-size: 1.8rem;
-  background: none;
-  color: #fff;
-}
-
 #main-nav a.active {
   background-color: var(--accent-color);
   font-weight: bold;
 }
 
-/* Mobile nav (hidden by default) */
 nav {
   display: none;
   flex-direction: column;
@@ -71,7 +63,6 @@ nav {
   padding: 1rem 0;
 }
 
-/* Active mobile nav */
 nav.active {
   display: flex;
 }
@@ -95,11 +86,8 @@ nav a.active {
   color: var(--color-accent1);
 }
 
-/* Desktop menu */
 @media (min-width: 768px) {
-  .menu-toggle {
-    display: none;
-  }
+  .menu-toggle { display: none; }
   nav {
     display: flex !important;
     flex-direction: row;
@@ -174,18 +162,14 @@ h3 { font-size: 1.25rem; }
 }
 
 @media (min-width: 768px) {
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (min-width: 1024px) {
-  .gallery-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* ==============================
-   Form Styles
+   Form Styles (Updated)
 ============================== */
 form {
   display: grid;
@@ -194,18 +178,27 @@ form {
 
 label {
   font-weight: 600;
+  display: block;
+  margin-bottom: 0.3rem;
 }
 
 input, textarea, select {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.6rem 0.8rem;
   border-radius: var(--radius);
   border: 1px solid #ccc;
   font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
 input:focus, textarea:focus, select:focus {
-  outline: 2px solid var(--color-accent1);
+  outline: none;
+  border-color: var(--color-accent1);
+  box-shadow: 0 0 0 3px rgba(224, 192, 151, 0.4);
+}
+
+input:required:invalid {
+  border-color: #d9534f;
 }
 
 button {
@@ -216,11 +209,46 @@ button {
   border-radius: var(--radius);
   font-size: 1rem;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 button:hover {
   background: var(--color-accent1);
   color: var(--color-text-dark);
+}
+
+/* Membership Cards */
+.membership-cards {
+  display: grid;
+  gap: 1rem;
+}
+
+.membership-card {
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  background: #fff;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.membership-card.selected {
+  border-color: var(--color-accent1);
+  transform: scale(1.02);
+}
+
+.membership-card h3 {
+  color: var(--color-accent2);
+  margin-bottom: 0.5rem;
+}
+
+.membership-card p {
+  font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  .membership-cards { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* ==============================
