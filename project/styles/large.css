@@ -1,43 +1,53 @@
 /* ============= Large Screen Styles ============= */
-/* Large screens: min-width 1024px */
+/* Applies to desktop and large tablet layouts (min-width: 1024px) */
 @media (min-width: 1024px) {
-  
-  /* Hide the hamburger toggle button */
+
+  /* Hide the hamburger toggle on large screens */
   .menu-toggle {
     display: none;
   }
 
-  /* Show nav as horizontal menu */
+  /* Flexbox navigation for large screens */
   #main-nav {
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
     gap: 2rem;
-    position: static;
     background: none;
+    position: static;
     padding: 0;
+  }
+
+  /* Wayfinding: highlight active page */
+  #main-nav a.active {
+    border-bottom: 3px solid var(--accent-color, #e67e22);
+    font-weight: bold;
+    color: var(--accent-color, #e67e22);
   }
 
   #main-nav a {
     display: inline-block;
     padding: 0.5rem 1rem;
-    color: var(--text-color, #000);
     text-decoration: none;
     font-weight: 500;
+    color: var(--text-color, #000);
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   #main-nav a:hover {
-    background-color: var(--accent-color, #f0f0f0);
+    background-color: var(--accent-light, #f0f0f0);
     border-radius: 4px;
   }
 
-  /* For gallery grid layout on large screens */
+  /* Gallery grid for large screens */
   #artwork-gallery,
-  #featured-artworks {
+  #featured-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
 
-  /* Modal adjustments for large screens */
+  /* Modal styling for large screens */
   dialog#info-modal {
     max-width: 500px;
     padding: 2rem;
