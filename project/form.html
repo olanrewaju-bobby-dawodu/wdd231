@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join the Virtual Art Gallery</title>
+  <meta name="description" content="Join our Virtual Art Gallery to showcase, explore, and connect with artists worldwide.">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/large.css">
+</head>
+<body>
+  <header>
+    <h1>Join the Virtual Art Gallery</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Membership Application</h2>
+      <form action="thankyou.html" method="get">
+        
+        <!-- Contact Info -->
+        <fieldset>
+          <legend>Your Information</legend>
+
+          <label for="firstName">First Name*</label>
+          <input type="text" id="firstName" name="firstName" required>
+
+          <label for="lastName">Last Name*</label>
+          <input type="text" id="lastName" name="lastName" required>
+
+          <label for="email">Email*</label>
+          <input type="email" id="email" name="email" placeholder="name@example.com" required>
+
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone">
+
+          <label for="title">Artistic Title / Role*</label>
+          <input type="text" id="title" name="title"
+                 pattern="[A-Za-z\s\-]{5,}" 
+                 title="At least 5 letters, spaces, or hyphens" required>
+        </fieldset>
+
+        <!-- Membership Levels -->
+        <fieldset>
+          <legend>Membership Type*</legend>
+
+          <label>
+            <input type="radio" name="membership" value="viewer" required>
+            Art Enthusiast (Free)
+          </label>
+
+          <label>
+            <input type="radio" name="membership" value="artist">
+            Contributing Artist ($100/year)
+          </label>
+
+          <label>
+            <input type="radio" name="membership" value="patron">
+            Patron of the Arts ($250/year)
+          </label>
+
+          <button type="button" id="membershipInfoBtn">View Membership Details</button>
+        </fieldset>
+
+        <!-- Art Info -->
+        <fieldset>
+          <legend>Art Portfolio Information</legend>
+          <label for="portfolioName">Portfolio / Studio Name*</label>
+          <input type="text" id="portfolioName" name="portfolioName" required>
+
+          <label for="medium">Primary Art Medium</label>
+          <input type="text" id="medium" name="medium" placeholder="e.g., Oil Painting, Photography">
+
+          <label for="description">About Your Work</label>
+          <textarea id="description" name="description" rows="4" placeholder="Tell us about your art style or projects"></textarea>
+        </fieldset>
+
+        <!-- Hidden Timestamp -->
+        <input type="hidden" id="timestamp" name="timestamp">
+
+        <!-- Submit -->
+        <button type="submit">Join the Gallery</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Virtual Art Gallery</p>
+  </footer>
+
+  <!-- Membership Info Modal -->
+  <dialog id="membershipModal">
+    <h3>Membership Levels & Benefits</h3>
+    <ul>
+      <li><strong>Art Enthusiast:</strong> Free access to exhibitions, newsletters, and community discussions.</li>
+      <li><strong>Contributing Artist:</strong> $100/year, showcase your works online, participate in virtual exhibitions.</li>
+      <li><strong>Patron of the Arts:</strong> $250/year, premium gallery access, exclusive artist meetups, and name featured on our supporters page.</li>
+    </ul>
+    <button id="closeModal">Close</button>
+  </dialog>
+
+  <script src="scripts/main.js" type="module"></script>
+  <script>
+    // Modal handling
+    const modal = document.getElementById('membershipModal');
+    document.getElementById('membershipInfoBtn').addEventListener('click', () => {
+      modal.showModal();
+    });
+    document.getElementById('closeModal').addEventListener('click', () => {
+      modal.close();
+    });
+
+    // Auto-fill timestamp
+    document.getElementById('timestamp').value = new Date().toLocaleString();
+
+    // Footer year
+    document.getElementById('currentyear').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

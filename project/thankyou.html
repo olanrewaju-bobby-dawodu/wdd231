@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thank you for joining the Virtual Art Gallery.">
+  <title>Thank You - Virtual Art Gallery</title>
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <link rel="stylesheet" href="styles/thankyou.css">
+ <script src="scripts/main.js" type="module"></script>
+</head>
+<body>
+  <header>
+    <h1>Virtual Art Gallery</h1>
+    <nav>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+      <ul id="menu" class="hidden">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="form.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Thank You for Becoming a Member!</h2>
+      <p>Your details have been recorded. We’re excited to welcome you to our community of artists and art lovers.</p>
+
+      <div id="submissionData" aria-live="polite">
+        <!-- JavaScript will display form data here -->
+      </div>
+
+      <p><a href="gallery.html">Explore the Gallery</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Virtual Art Gallery</p>
+  </footer>
+</body>
+</html>
